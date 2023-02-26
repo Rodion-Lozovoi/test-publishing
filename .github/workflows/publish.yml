@@ -23,11 +23,12 @@ jobs:
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+
       - name: Build Storybook
         run: npm run build-storybook
-      - name: Deploy Storybook to Github Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.2
+
+      - name: Deploy to GH Pages 🚀
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          branch: gh-pages
-          folder: storybook-static
-          personal_token: ${{ secrets.GITHUB_TOKEN }}
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: storybook-static
