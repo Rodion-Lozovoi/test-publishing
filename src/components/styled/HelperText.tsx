@@ -3,7 +3,7 @@ import { FormHelperText } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
 const HelperTextStyled = styled(FormHelperText)`
-  margin: 4px 12px 4px 0;
+  margin: 5px 12px 5px 0;
 `;
 
 interface Props {
